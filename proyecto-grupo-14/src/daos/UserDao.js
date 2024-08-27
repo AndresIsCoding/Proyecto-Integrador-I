@@ -1,8 +1,15 @@
-import { collection } from "firebase/firestore";
+import { 
+    collection,
+    doc,
+    getDoc,
+    deleteDoc,
+    updateDoc,
+    addDoc,
+ } from "firebase/firestore";
 import { db } from "../../firebase.config";
 
-class UserDao {
-    constructot() {
+class UserDAO {
+    constructor() {
         this.collectionRef = collection(db, "users");
     }
 
@@ -51,4 +58,4 @@ async getUserById(id) {
   }
 }
 
-export default new UserDao();
+export default new UserDAO();
