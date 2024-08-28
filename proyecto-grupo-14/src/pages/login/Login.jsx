@@ -21,7 +21,7 @@ const Login = () => {
                 photo: user.photoURL,
             };
             UserDAO.createUser(newUser);
-            navigate("/Quiz");
+            navigate("/");
         }
     }, [user,navigate]);
 
