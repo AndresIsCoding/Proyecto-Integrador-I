@@ -14,7 +14,7 @@
 
 .loading-text {
     font-size: medium;
-    color: #666;
+    color: #ffffff;
 }.container-login {
   display: flex;
   flex-direction: column;
@@ -30,7 +30,7 @@
 
 .loading-text {
   font-size: medium;
-  color: #666;
+  color: #ffffff;
 }
 
 
