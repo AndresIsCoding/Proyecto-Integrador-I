@@ -6,6 +6,7 @@ import World from './pages/World/World.jsx';
 import './index.css'
 import {createBrowserRouter, RouterProvider } from "react-router-dom";
 
+
 /**
  * Creates the router configuration for the application.
  * Defines the routes for the application, including the path and corresponding components.
