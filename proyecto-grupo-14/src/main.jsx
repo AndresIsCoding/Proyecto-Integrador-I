@@ -1,9 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import Login from './pages/login/Login.jsx'
-import World from './pages/World/World.jsx';  
+import World from './pages/world/World.jsx';  
 import './index.css'
 import {createBrowserRouter, RouterProvider } from "react-router-dom";
+
 
 
 /**
