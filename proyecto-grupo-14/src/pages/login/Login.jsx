@@ -47,7 +47,7 @@ const Login = () => {
             // Redirect to the World page after 8 seconds
             const timer = setTimeout(() => {
                 setShowLoading(false); // Hide the loading message
-                navigate("/World");
+                navigate("/inicio");
             }, 5000);
 
             // Clear the timer if the component unmounts

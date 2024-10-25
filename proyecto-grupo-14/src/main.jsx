@@ -1,9 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import Login from './pages/login/Login.jsx'
-import World from './pages/world/World.jsx';  
+import Inicio from './pages/inicio/Inicio.jsx';
+import Contaminacion from './pages/contaminacion/contaminacion.jsx';
 import './index.css'
 import {createBrowserRouter, RouterProvider } from "react-router-dom";
+
+
 
 
 
@@ -19,9 +22,14 @@ const router = createBrowserRouter([
     element: <Login />,
   },
   {
-    path: "/world",
-    element: <World />,  
+    path: "/inicio",
+    element: <Inicio />,  
   },
+
+  {
+    path: "/contaminacion",
+    element: <Contaminacion/>
+  }
 
 ])
 
