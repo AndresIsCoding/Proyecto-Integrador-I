@@ -1,0 +1,34 @@
+header{
+    position: fixed;
+    display: flex;
+    height: 70px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    z-index: 10
+}
+
+.logo{
+    position: absolute;
+    left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 210px;
+}
+
+nav {
+    display: flex; /* Asegúrate de que nav use flexbox */
+
+}
+
+nav a{
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    pointer-events: auto;
+}

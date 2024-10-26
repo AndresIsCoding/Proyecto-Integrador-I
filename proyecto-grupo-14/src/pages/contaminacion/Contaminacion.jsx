@@ -3,6 +3,7 @@ import './Contaminacion.css';
 import PlasticBottles from "./PlasticBottles";
 import OilBarrel from "./OilBarrel";
 import EggCarton from "./EggCarton";
+import Header from "../../components/Header";
 
 
 
@@ -12,6 +13,9 @@ const Contaminacion = () => {
   };
 
   return (
+    <>
+    <Header/>
+    
     <Canvas camera={cameraSettings}>
       <ambientLight intensity={0.5} />
       <directionalLight position={[10, 10, 5]} intensity={1} />
@@ -19,6 +23,7 @@ const Contaminacion = () => {
       <OilBarrel/>
       <EggCarton/>
     </Canvas>
+    </>
     
   );
 };
