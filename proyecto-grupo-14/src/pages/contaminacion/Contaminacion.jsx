@@ -13,7 +13,7 @@ const Contaminacion = () => {
   };
 
   return (
-    <>
+    <div className="contaminacion-background">
     <Header/>
     
     <Canvas camera={cameraSettings}>
@@ -23,7 +23,7 @@ const Contaminacion = () => {
       <OilBarrel/>
       <EggCarton/>
     </Canvas>
-    </>
+    </div>
     
   );
 };

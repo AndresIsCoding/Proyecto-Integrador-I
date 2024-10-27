@@ -11,7 +11,7 @@ const Inicio = () => {
   };
 
   return (
-    <>
+    <div className="inicio-background">
       <Header /> 
 
       <Canvas camera={cameraSettings}>
@@ -19,7 +19,7 @@ const Inicio = () => {
         <directionalLight position={[10, 10, 5]} intensity={1} />
         <Earth position={[0, 0, 0]}/>
       </Canvas>
-    </>
+    </div>
   );
 };
 
