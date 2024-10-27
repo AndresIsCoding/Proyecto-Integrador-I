@@ -1,4 +1,5 @@
 html,body, #root{
+    outline: none;
     top: 0;
     left: 0;
     width: 100%;
@@ -7,6 +8,7 @@ html,body, #root{
 }
 
 canvas {
+    outline: none;
     touch-action: none;
     position: absolute; 
     top: 0;
@@ -16,4 +18,5 @@ canvas {
     z-index: 0; 
     
 }
+
 

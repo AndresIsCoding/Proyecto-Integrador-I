@@ -1,18 +1,28 @@
 import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import { OrbitControls, useGLTF } from '@react-three/drei'
 
 const Earth = (props) => {
-  const { nodes, materials } = useGLTF('../models-3d/Earth.glb');
-  console.log(materials)
-  console.log(nodes)
+  const { nodes, materials } = useGLTF('../models-3d/Earth.glb')
   return (
-    <group {...props}>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Cube001.geometry}
-        material={materials['Default OBJ']}
+    <group {...props} dispose={null}>
+      <OrbitControls
+       autoRotate={true}
+       enableZoom={false}
+       enablePan={false}
       />
+      <directionalLight position={[0, 0, 2]} intensity={5} />
+      <directionalLight position={[0, 0, -2]} intensity={5} />
+
+
+      <group scale={0.01}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Cube_002.geometry}
+          material={materials.Default_OBJ}
+          scale={0.3}
+        />
+      </group>
     </group>
   )
 }
@@ -20,3 +30,4 @@ const Earth = (props) => {
 export default Earth;
 
 useGLTF.preload('../models-3d/Earth.glb')
+

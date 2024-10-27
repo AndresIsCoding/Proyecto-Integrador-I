@@ -78,19 +78,26 @@ const Login = () => {
 
     // Render the login or logout UI based on the authentication state
     return (
-        <div className="container-login">
-            {user ? (
-                <>
-                    {showWelcome && <p className="welcome-text">Bienvenido, {user.displayName}</p>}
-                    {showLoading && <p className="loading-text">Cargando...</p>}
-                    <button className="button-logout" onClick={handleLogout}>Cerrar sesión</button>
-                </>
-            ) : (
-                <>
-                    <button onClick={handleLogin}>Iniciar sesión</button>
-                </>
-            )}
-        </div>
+        <>
+            <header>
+                <div className="logo">
+                    <img src="../images/Logo.png" alt="logo" />
+                </div>
+            </header>   
+            <div className="container-login">
+                {user ? (
+                    <>
+                        {showWelcome && <p className="welcome-text">Bienvenido, {user.displayName}</p>}
+                        {showLoading && <p className="loading-text">Cargando...</p>}
+                        <button className="button-logout" onClick={handleLogout}>Cerrar sesión</button>
+                    </>
+                ) : (
+                    <>
+                        <button onClick={handleLogin}>Iniciar sesión</button>
+                    </>
+                )}
+            </div>
+        </>
     );
 };
 

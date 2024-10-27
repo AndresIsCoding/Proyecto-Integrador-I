@@ -6,10 +6,6 @@ import Contaminacion from './pages/contaminacion/contaminacion.jsx';
 import './index.css'
 import {createBrowserRouter, RouterProvider } from "react-router-dom";
 
-
-
-
-
 /**
  * Creates the router configuration for the application.
  * Defines the routes for the application, including the path and corresponding components.
@@ -29,7 +25,17 @@ const router = createBrowserRouter([
   {
     path: "/contaminacion",
     element: <Contaminacion/>
-  }
+  },
+
+  {
+    path: "escasez",
+    element: <Contaminacion/>
+  },
+
+  {
+    path: "acidificacion",
+    element: <Contaminacion/>
+  },
 
 ])
 

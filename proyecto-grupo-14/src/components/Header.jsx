@@ -1,18 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Header.css'
+import Navbar from './Navbar';
+
 const Header = () => {
   return (
-    <header>
-      <div className="logo">
-        <img src="../images/Logo.png" alt="logo" />
-      </div>
-      <nav>
-        <a href="" className="nav-link">Inicio</a>
-        <a href="" className="nav-link">Contaminación</a>
-        <a href="" className="nav-link">Escasez</a>
-        <a href="" className="nav-link">Acidificación</a>
-      </nav>
-    </header>
+    <>
+      <Navbar/>
+      <header>
+        <div className="logo">
+          <img src="../images/Logo.png" alt="logo" />
+        </div>
+        <nav>
+          <Link to="/inicio">Inicio</Link>
+          <Link to="/contaminacion">Contaminación</Link>
+          <Link to="/escasez">Escasez</Link>
+          <Link to="/acidificacion">Acidificación</Link>
+        </nav>
+      </header>
+    </>
   );
 };
 
