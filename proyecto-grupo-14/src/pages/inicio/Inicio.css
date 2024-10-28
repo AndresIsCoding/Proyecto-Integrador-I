@@ -8,7 +8,13 @@ html,body, #root{
 }
 
 .main-container{
-    background-color: white;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 50px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #E0EAFC;  
+    background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  
+    background: linear-gradient(to right, #CFDEF3, #E0EAFC); 
     height: 100vh;
 }
 
@@ -23,41 +29,61 @@ canvas {
     z-index: 0; 
 }
 
+.main-title{
+    user-select: none;
+    position: absolute; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    color: white; 
+    z-index: 10;
+    text-align: center; 
+    width: 100%; 
+
+}
+
 .title1{
+    user-select: none;
     position: absolute; 
-    top: 18%; 
+    top: 13%; 
     transform: translateY(-50%); 
     color: black; 
     z-index: 10;
     text-align: center; 
     width: 100%; 
-}
-
-.titleA {
-    margin: 0; 
-    top: 15%; 
-}
-
-.title2{
-    position: absolute; 
-    top: 80%; 
-    transform: translateY(-50%); 
-    color: black; 
-    z-index: 10;
-    text-align: center; 
-    width: 100%; 
-}
-
-.titleB {
-    margin: 0; 
-    top: 15%; 
 }
 
 .paragraph {
-    margin: 20px; 
+    margin: 30px; 
     text-align: left;
     color: black;
     position: absolute; 
-    top: 50%; 
-  }
+    top: 45%; 
+}
 
+.title3{
+    margin: 30px; 
+    text-align: left;
+    color: black;
+    position: absolute; 
+    top: 40%; 
+}
+
+.second-container{
+    text-align: center;
+    margin-bottom: 20px;
+    background: #E0EAFC;  
+    background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  
+    background: linear-gradient(to right, #CFDEF3, #E0EAFC); 
+    height: 100vh;
+}
+
+.title2{
+    user-select: none;
+    position: relative; 
+    top: 10%; 
+    transform: translateY(-50%); 
+    color: black; 
+    z-index: 10;
+    text-align: center; 
+    width: 100%; 
+}
