@@ -11,7 +11,7 @@ const Earth = (props) => {
        enablePan={false}
       />
       <directionalLight position={[0, 0, 2]} intensity={5} />
-      <directionalLight position={[0, 0, -2]} intensity={5} />
+      <directionalLight position={[0, 0, -2]} intensity={9} />
 
 
       <group scale={0.01}>
