@@ -1,10 +1,15 @@
 import React, { useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
+import { OrbitControls, useGLTF } from '@react-three/drei'
 
 const OilBarrel = (props) => {
   const { nodes, materials } = useGLTF('../models-3d/OilBarrel.glb')
   return (
     <group {...props} dispose={null}>
+      <OrbitControls
+       autoRotate={true}
+       enableZoom={false}
+       enablePan={false}
+      />
       <mesh
         castShadow
         receiveShadow

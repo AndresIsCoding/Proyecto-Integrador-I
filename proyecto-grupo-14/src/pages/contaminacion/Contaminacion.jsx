@@ -18,10 +18,8 @@ const Contaminacion = () => {
     
     <Canvas camera={cameraSettings}>
       <ambientLight intensity={0.5} />
-      <directionalLight position={[10, 10, 5]} intensity={1} />
-      <PlasticBottles/>   
-      <OilBarrel/>
-      <EggCarton/>
+      <directionalLight position={[10, 10, 5]} intensity={1} />  
+      <OilBarrel scale={3} position={[0,-1,0]}/>
     </Canvas>
     </div>
     

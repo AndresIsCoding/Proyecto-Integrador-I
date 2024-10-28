@@ -78,12 +78,19 @@ canvas {
 }
 
 .title2{
+    margin-bottom: 10px;
     user-select: none;
     position: relative; 
-    top: 10%; 
+    top: -4%; 
     transform: translateY(-50%); 
     color: black; 
     z-index: 10;
     text-align: center; 
     width: 100%; 
+}
+
+.intro-contamincacion{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
