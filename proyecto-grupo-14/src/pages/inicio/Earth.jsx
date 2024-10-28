@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { OrbitControls, useGLTF } from '@react-three/drei'
 
 const Earth = (props) => {
-  const { nodes, materials } = useGLTF('../models-3d/Earth.glb')
+  const { nodes, materials } = useGLTF('../models-3d/earth.glb')
   return (
     <group {...props} dispose={null}>
       <OrbitControls
@@ -29,5 +29,5 @@ const Earth = (props) => {
 
 export default Earth;
 
-useGLTF.preload('../models-3d/Earth.glb')
+useGLTF.preload('../models-3d/earth.glb')
 
