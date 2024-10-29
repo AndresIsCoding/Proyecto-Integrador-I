@@ -16,7 +16,7 @@ const AcidificacionInt = () => {
     <div className="acidificacion-intro">
       <h1>Introduccion</h1>
         <p>
-        como sabemos, el océano es uno de los ecosistemas más grandes
+        Como sabemos, el océano es uno de los ecosistemas más grandes
         e importantes del planeta, pues no solo nos provee de una gran
         variedad de recursos naturales como alimentos ,compuestos químicos 
         para medicinas y minerales que se encuentran en el lecho marino, 
