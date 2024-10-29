@@ -1,14 +1,16 @@
+
 .backgroundC{
     display: flex;
     flex-direction: column;
     background-color: #BAC196;
 }
 .main-containerC {
-    position: relative;
-    justify-content: center;
+    flex-direction: column;
     display: flex;
     height: 100vh;
+    min-height: 100vh;
     overflow: hidden; 
+    
 }
   
 .canvas-cont {

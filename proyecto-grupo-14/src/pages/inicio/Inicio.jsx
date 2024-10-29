@@ -20,9 +20,9 @@ const Inicio = () => {
   };
 
   return (
+    
     <div className="main-container">
       <Header /> 
-
       <Canvas
         className="canvas-inicio" 
         camera={cameraSettings}
