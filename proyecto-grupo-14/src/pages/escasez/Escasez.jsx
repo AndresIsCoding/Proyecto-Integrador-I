@@ -1,7 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import Green from "./Green";
 import Header from "../../components/Header";
-import './escasez.css';
+import './Escasez.css';
 
 const Escasez = () => {
   const cameraSettings = {
