@@ -1,4 +1,62 @@
-.contaminacion-background{
-    background: linear-gradient(220.55deg, #B9A14C 0%, #000000 100%);
+.main-containerC{
+    background: #AB9663;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 50px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 100vh;
+
+}
+
+.canvas-cont{
+    position:fixed; 
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    z-index: 0;
+}
+
+.intro-cont{
+    color: black;
+}
+
+.intro-cont h1{
+    user-select: none;
+    position: absolute; 
+    top: 35%; 
+    width: 100%; 
+    transform: translateY(-50%);  
+    z-index: 0;
+    text-align: center; 
+}
+
+.intro-cont p{
+    margin-top: 20px;
+    font-size: 16px;
+    position: absolute;
+    text-align: center;
+    top: 45%;
+    width: 100%;
+    z-index: 10;
+    
+}
+
+.cont-second-container{
+    text-align: center;
+    margin-top: 20px;
+    background: #AB9663;
     height: 100vh;
 }
+
+.tipos-cont{
+    user-select: none;
+    position: relative; 
+    top: 10%; 
+    width: 100%; 
+    transform: translateY(-50%); 
+    color: white; 
+    z-index: 0;
+    text-align: center; 
+}
+
