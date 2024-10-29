@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import Login from './pages/login/Login.jsx'
 import Inicio from './pages/inicio/Inicio.jsx';
 import Contaminacion from './pages/contaminacion/contaminacion.jsx';
+import Acidificacion from './pages/acidificacion/Introduccion/AcidificacionInt.jsx';
 import './index.css'
 import {createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -34,7 +35,7 @@ const router = createBrowserRouter([
 
   {
     path: "acidificacion",
-    element: <Contaminacion/>
+    element: <Acidificacion/>
   },
 
 ])
