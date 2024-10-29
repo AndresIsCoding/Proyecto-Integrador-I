@@ -1,9 +1,15 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import Login from './pages/login/Login.jsx'
-import World from './pages/World/World.jsx';  
+import Inicio from './pages/inicio/Inicio.jsx';
+import Contaminacion from './pages/contaminacion/Contaminacion.jsx';
+import Calificaciones from './pages/calificaciones/Calificaciones.jsx';
+import Quiz from './pages/quiz/Quiz.jsx';
+import Acidificacion from './pages/acidificacion/Introduccion/AcidificacionInt.jsx';
 import './index.css'
 import {createBrowserRouter, RouterProvider } from "react-router-dom";
+import Escasez from './pages/escasez/Escasez.jsx';
+
 
 /**
  * Creates the router configuration for the application.
@@ -17,8 +23,33 @@ const router = createBrowserRouter([
     element: <Login />,
   },
   {
-    path: "/world",
-    element: <World />,  
+    path: "/inicio",
+    element: <Inicio />,  
+  },
+
+  {
+    path: "/contaminacion",
+    element: <Contaminacion/>
+  },
+
+  {
+    path: "/escasez",
+    element: <Escasez/>
+  },
+
+  {
+    path: "acidificacion",
+    element: <Acidificacion/>
+  },
+
+  {
+    path: "calificaciones",
+    element: <Calificaciones/>
+  },
+
+  {
+    path: "quiz",
+    element: <Quiz/>
   },
 
 ])

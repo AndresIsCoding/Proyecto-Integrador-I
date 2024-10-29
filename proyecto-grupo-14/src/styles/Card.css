@@ -1,0 +1,55 @@
+.card {
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    flex: 1; 
+    height: 400px;
+    width: 345px;
+    max-width: 345px;
+    background-color: white; 
+    margin: 0; 
+    border: 1px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    
+}
+
+.card iframe {
+    border: none;
+    width: 345px;
+    height: 198px;
+    object-fit: cover;
+}
+
+.card-content{
+    padding: 16px; 
+    color: black;
+    text-align: left;
+}
+
+.card-content h3{
+    margin: 0px;
+    
+}
+
+.card-content p {
+    margin-top: 10px;
+}
+.card-content a{
+    color: gray;
+}
+
+.card:hover .card-content h3,
+.card:hover .card-content p,
+.card:hover .card-content a{
+    color:#61B2F2;
+}
+

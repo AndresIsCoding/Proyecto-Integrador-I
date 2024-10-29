@@ -1,0 +1,48 @@
+header{
+    position: absolute;
+    display: flex;
+    height: 70px;
+    width: 97%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    z-index: 15;
+    user-select: none;  
+}
+
+.logo{
+    position: absolute;
+    left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    outline: none;
+    height: 210px;
+}
+
+nav {
+    outline: none;
+    display: flex; 
+
+}
+
+nav a{
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    pointer-events: auto;
+    transition: 0.3s;
+   
+}
+
+nav a:hover{
+    color:#61B2F2;
+}
+
+nav a:focus{
+    border: none;
+
+}

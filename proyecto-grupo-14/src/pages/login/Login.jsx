@@ -47,7 +47,7 @@ const Login = () => {
             // Redirect to the World page after 8 seconds
             const timer = setTimeout(() => {
                 setShowLoading(false); // Hide the loading message
-                navigate("/World");
+                navigate("/inicio");
             }, 5000);
 
             // Clear the timer if the component unmounts
@@ -78,19 +78,31 @@ const Login = () => {
 
     // Render the login or logout UI based on the authentication state
     return (
-        <div className="container-login">
-            {user ? (
-                <>
-                    {showWelcome && <p className="welcome-text">Bienvenido, {user.displayName}</p>}
-                    {showLoading && <p className="loading-text">Cargando...</p>}
-                    <button className="button-logout" onClick={handleLogout}>Cerrar sesión</button>
-                </>
-            ) : (
-                <>
-                    <button onClick={handleLogin}>Iniciar sesión</button>
-                </>
-            )}
-        </div>
+        <>
+            <header>
+                <div className="logo">
+                    <img src="../images/Logo.png" alt="logo" />
+                </div>
+            </header>   
+            <div className="container-login">
+                {user ? (
+                    <>
+                        {showWelcome && <p className="welcome-text">Bienvenido, {user.displayName}</p>}
+                        {showLoading && <p className="loading-text">Cargando...</p>}
+                        <button className="button-logout" onClick={handleLogout}>Cerrar sesión</button>
+                    </>
+                ) : (
+                    <>  
+                        <p className="welcome-text">Bienvenido a </p>
+                        <p className="app-text">Waterdrops </p>
+                        <button onClick={handleLogin} className="Login-button">
+                        <span>Iniciar sesión con </span>
+                        <img src="../images/google-icon.png" alt="Google Icon" class="icon"></img>
+                        </button>
+                    </>
+                )}
+            </div>
+        </>
     );
 };
 
