@@ -5,6 +5,7 @@ import Inicio from './pages/inicio/Inicio.jsx';
 import Contaminacion from './pages/contaminacion/contaminacion.jsx';
 import './index.css'
 import {createBrowserRouter, RouterProvider } from "react-router-dom";
+import Escasez from './pages/escasez/Escasez.jsx';
 
 /**
  * Creates the router configuration for the application.
@@ -28,8 +29,8 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "escasez",
-    element: <Contaminacion/>
+    path: "/escasez",
+    element: <Escasez/>
   },
 
   {
