@@ -15,6 +15,8 @@ const Header = () => {
           <Link to="/contaminacion">Contaminación</Link>
           <Link to="/escasez">Escasez</Link>
           <Link to="/acidificacion">Acidificación</Link>
+          <Link to="/quiz">Quiz</Link>
+          <Link to="/calificaciones">Calificaciones</Link>
         </nav>
       </header>
     </>
