@@ -1,0 +1,11 @@
+.acidificacion-background{
+    background-color: rgb(1, 193, 241);
+    height: 100vh;
+}
+
+.acidificacion-intro{
+    position: absolute;
+    z-index: 2;
+    top: 100px; right: 60px;
+    color: black;
+}
