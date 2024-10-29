@@ -12,18 +12,29 @@ const Escasez = () => {
   return (
     <div className="escasez-background">
       <Header />
-      {/* Agrega el texto de introducción aquí */}
       <div className="escasez-intro">
         <h2>Escasez de Agua</h2>
         <p>
-        La escasez de agua es uno de los problemas más críticos que enfrenta el mundo en la actualidad. A medida que la población mundial crece y el cambio climático altera los patrones de precipitación, el acceso al agua dulce se vuelve cada vez más limitado. En muchas regiones, la demanda de agua supera la capacidad de los recursos disponibles, lo que impacta gravemente en la agricultura, la industria y la vida diaria de millones de personas. La gestión sostenible del agua es fundamental para garantizar que las futuras generaciones puedan disfrutar de este recurso vital.
-
-
+          La escasez de agua es uno de los problemas más críticos que enfrenta el mundo en la actualidad. A medida que la población mundial crece y el cambio climático altera los patrones de precipitación, el acceso al agua dulce se vuelve cada vez más limitado. En muchas regiones, la demanda de agua supera la capacidad de los recursos disponibles, lo que impacta gravemente en la agricultura, la industria y la vida diaria de millones de personas. La gestión sostenible del agua es fundamental para garantizar que las futuras generaciones puedan disfrutar de este recurso vital.
         </p>
       </div>
-      <Canvas camera={cameraSettings}>
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[10, 10, 5]} intensity={1} />
+      <Canvas shadows camera={cameraSettings}> 
+        <ambientLight intensity={0.3} />
+        
+        {/* Primera luz direccional con sombras habilitadas */}
+        <directionalLight 
+          position={[10, 10, 5]} 
+          intensity={1} 
+          castShadow
+        />
+
+        {/* Segunda luz direccional, ubicada en un ángulo diferente */}
+        <directionalLight 
+          position={[-10, 10, -5]} 
+          intensity={0.5} 
+          castShadow
+        />
+
         <Green />
       </Canvas>
     </div>
@@ -31,3 +42,4 @@ const Escasez = () => {
 };
 
 export default Escasez;
+
