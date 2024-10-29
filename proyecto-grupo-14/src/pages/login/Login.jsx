@@ -92,8 +92,13 @@ const Login = () => {
                         <button className="button-logout" onClick={handleLogout}>Cerrar sesión</button>
                     </>
                 ) : (
-                    <>
-                        <button onClick={handleLogin}>Iniciar sesión</button>
+                    <>  
+                        <p className="welcome-text">Bienvenido a </p>
+                        <p className="app-text">Waterdrops </p>
+                        <button onClick={handleLogin} className="Login-button">
+                        <span>Iniciar sesión con </span>
+                        <img src="../images/google-icon.png" alt="Google Icon" class="icon"></img>
+                        </button>
                     </>
                 )}
             </div>

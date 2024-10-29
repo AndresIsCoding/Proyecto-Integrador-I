@@ -55,5 +55,23 @@ header{
   color: #ffffff;
 }
 
+.Login-button{
+  display: inline-flex; 
+  align-items: center;
+}
 
+.icon{
+  width: 40px; 
+  height: 40px;
+}
 
+.app-text {
+  font-size: 50px;
+  color: rgb(28, 125, 204);
+  animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
