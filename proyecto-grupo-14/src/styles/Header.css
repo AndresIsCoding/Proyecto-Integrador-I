@@ -6,7 +6,7 @@ header{
     align-items: center;
     justify-content: center;
     padding: 10px;
-    z-index: 10;
+    z-index: 15;
     user-select: none;  
 }
 

@@ -20,7 +20,7 @@ const OilBarrel = (props) => {
   return (
     <group {...props} ref={ref} dispose={null} >
       <OrbitControls
-        autoRotate={false}
+        autoRotate={true}
         enableZoom={false}
         enablePan={false}
         enableRotate={false}

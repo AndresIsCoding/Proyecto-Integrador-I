@@ -16,6 +16,14 @@ const Contaminacion = () => {
 
       <div className="main-containerC">
         <Header/>
+        <Canvas
+         className="canvas-cont"
+         camera={cameraSettings}
+         >
+        <ambientLight intensity={0.5} />
+        <directionalLight position={[10, 10, 5]} intensity={5} />
+        <PlasticBottles scale={6} position={[0,-1,0]}/>
+      </Canvas>
         
         <div className="intro-cont">
           <h1>¿Qué es la contaminación del agua?</h1>
