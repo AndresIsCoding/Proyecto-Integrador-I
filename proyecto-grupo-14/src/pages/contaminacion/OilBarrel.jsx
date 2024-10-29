@@ -4,20 +4,26 @@ import { useFrame } from '@react-three/fiber'
 
 const OilBarrel = (props) => {
   const { nodes, materials } = useGLTF('../models-3d/OilBarrel.glb')
-  const barrelRef = useRef();
+  const ref = useRef();
+  const floatSpeed = 0.5; 
+  const floatAmplitude = 1.5; 
+  const moveSpeedX = 1.5; 
+  const moveAmplitudeX = 1.5; 
 
-  useFrame(() => {
-    if (barrelRef.current) {
-      barrelRef.current.rotation.x += 0.01; 
-      barrelRef.current.rotation.y += 0.01; 
-    }
+  useFrame(({ clock }) => {
+    const t = clock.getElapsedTime();
+   
+    ref.current.position.y = Math.sin(t * floatSpeed) * floatAmplitude; 
+  
+    ref.current.position.x = Math.sin(t * moveSpeedX) * moveAmplitudeX; 
   });
   return (
-    <group ref={barrelRef} {...props} dispose={null}>
+    <group {...props} ref={ref} dispose={null} >
       <OrbitControls
-        autoRotate={true}
+        autoRotate={false}
         enableZoom={false}
         enablePan={false}
+        enableRotate={false}
       />
       <mesh
         castShadow
