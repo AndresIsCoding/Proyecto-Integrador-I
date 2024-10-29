@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "../pages/login/Login";
 import Inicio from "../pages/inicio/Inicio";
 import Contaminacion from "../pages/contaminacion/contaminacion";
+import Escasez from "../pages/escasez/escasez";
 
 
 const RoutesProject = () => {
@@ -11,6 +12,7 @@ const RoutesProject = () => {
                 <Route path="/" element={<Login/>} />
                 <Route path="/inicio" element={<Inicio/>} />
                 <Route path="/contaminacion" element={<Contaminacion/>} />
+                <Route path="/escasez" element={<Escasez/>} />
             </Routes>
         </BrowserRouter>
     )

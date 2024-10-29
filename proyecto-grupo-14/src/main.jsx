@@ -7,6 +7,7 @@ import Calificaciones from './pages/calificaciones/Calificaciones.jsx';
 import Quiz from './pages/quiz/Quiz.jsx';
 import './index.css'
 import {createBrowserRouter, RouterProvider } from "react-router-dom";
+import Escasez from './pages/escasez/Escasez.jsx';
 
 
 /**
@@ -31,8 +32,8 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "escasez",
-    element: <Contaminacion/>
+    path: "/escasez",
+    element: <Escasez/>
   },
 
   {
