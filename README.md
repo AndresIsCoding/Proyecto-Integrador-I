@@ -1,3 +1,4 @@
+# Actual version: 1.0.1
 # How to run the project?
 1. Enter to the terminal
 2. Write cd proyecto-grupo-14
