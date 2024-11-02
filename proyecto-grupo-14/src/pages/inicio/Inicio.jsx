@@ -8,13 +8,6 @@ import {Link, useNavigate} from "react-router-dom";
 
 const Inicio = () => {
 
-  const navigate = useNavigate(); 
-
-  const handleLinkClick = (path) => {
-    window.scrollTo(0, 0); 
-    navigate.push(path); 
-  };
-
   const cameraSettings = { 
     fov: 60,
   };
@@ -51,7 +44,7 @@ const Inicio = () => {
       <div className="second-container">
         <h2 className="title2">Pero ese no es el único problema</h2>
         <div className="intro-contamincacion">
-          <Link to="/contaminacion" onClick={() => handleLinkClick("/contaminacion")}>
+          <Link to="/contaminacion">
             <Card>
               <iframe 
                 className="video-contaminacion" 
@@ -67,12 +60,12 @@ const Inicio = () => {
               <div className="card-content">
                 <h3>Contaminación</h3>
                 <p>Cada día, 2 millones de toneladas de aguas residuales desembocan en las aguas del mundo, según datos de la ONU.</p>
-                <Link to="/contaminacion" onClick={() => handleLinkClick("/contaminacion")}>¿Quieres saber más? Click aquí</Link>
+                <Link to="/contaminacion">¿Quieres saber más? Click aquí</Link>
               </div>             
             </Card>
           </Link>
 
-          <Link to="/escasez" onClick={() => handleLinkClick("/escasez")}>
+          <Link to="/escasez">
             <Card>
               <iframe 
                 width="560" 
@@ -87,12 +80,12 @@ const Inicio = () => {
               <div className="card-content">
                 <h3>Escasez</h3>
                 <p>Los recursos de agua dulce por persona se han reducido un 20 por ciento en los últimos 20 años. A su vez, la disponibilidad y calidad empeoran rápidamente.</p>
-                <Link to="/escasez" onClick={() => handleLinkClick("/escasez")}>¿Quieres saber más? Click aquí</Link>
+                <Link to="/escasez">¿Quieres saber más? Click aquí</Link>
               </div>
             </Card>
           </Link>
 
-          <Link to="/acidificacion" onClick={() => handleLinkClick("/acidificacion")}>
+          <Link to="/acidificacion">
             <Card>
               <iframe 
                 width="560" 
@@ -106,7 +99,7 @@ const Inicio = () => {
               <div className="card-content">
                 <h3>Acidificación de los oceanos</h3>
                 <p>Es una consecuencia directa de la quema de combustibles fósiles y la contaminación por carbono.</p>
-                <Link to="/acidificacion" onClick={() => handleLinkClick("/acidificacion")}>¿Quieres saber más? Click aquí</Link>
+                <Link to="/acidificacion">¿Quieres saber más? Click aquí</Link>
               </div>             
             </Card>
           </Link>
