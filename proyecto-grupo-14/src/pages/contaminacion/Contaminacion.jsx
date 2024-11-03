@@ -39,8 +39,13 @@ const Contaminacion = () => {
         <h1>Tipos de contaminación</h1>
         <Slideshow/>
       </div>
+      
+      <div className="third-containerC" >
+        <h1>Efectos de la contaminación</h1>
+      </div>
 
     </div>
+
     
   );
 };

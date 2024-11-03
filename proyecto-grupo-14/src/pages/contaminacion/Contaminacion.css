@@ -2,7 +2,7 @@
 .backgroundC{
     display: flex;
     flex-direction: column;
-    background-color: #BAC196;
+    background-color: #6a7243;
 }
 .main-containerC {
     flex-direction: column;
@@ -60,8 +60,9 @@
     position: relative; 
     top: -4%; 
     transform: translateY(-50%); 
-    color: black; 
+    color: white; 
     z-index: 10;
     text-align: center; 
     width: 100%; 
 }
+

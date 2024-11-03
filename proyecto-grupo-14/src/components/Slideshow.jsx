@@ -50,13 +50,19 @@ const Slideshow = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
         ></iframe>
+        <div className='inside-card'>
         <h2 className="slide-title">{slidesData[currentSlide].title}</h2>
         <p className="slide-description">{slidesData[currentSlide].description}</p>
+          <div className="slideshow-controls">
+            <button onClick={prevSlide}>Anterior</button>
+            <button onClick={nextSlide}>Siguiente</button>
+          </div>
+          
+        </div>
+       
+        
       </div>
-      <div className="slideshow-controls">
-        <button onClick={prevSlide}>Anterior</button>
-        <button onClick={nextSlide}>Siguiente</button>
-      </div>
+      
     </div>
   );
 };
