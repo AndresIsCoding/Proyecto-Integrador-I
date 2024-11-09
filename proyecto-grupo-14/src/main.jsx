@@ -6,6 +6,7 @@ import Contaminacion from './pages/contaminacion/Contaminacion.jsx';
 import Calificaciones from './pages/calificaciones/Calificaciones.jsx';
 import Quiz from './pages/quiz/Quiz.jsx';
 import Acidificacion from './pages/acidificacion/Introduccion/AcidificacionInt.jsx';
+import AcidiSensi from './pages/acidificacion/Sensibilizacion/AcidificacionSen.jsx';
 import './index.css'
 import {createBrowserRouter, RouterProvider } from "react-router-dom";
 import Escasez from './pages/escasez/Escasez.jsx';
@@ -40,6 +41,11 @@ const router = createBrowserRouter([
   {
     path: "acidificacion",
     element: <Acidificacion/>
+  },
+
+  {
+    path: "acidisensi",
+    element: <AcidiSensi/>
   },
 
   {
