@@ -4,6 +4,7 @@ import Lights from "./lights/Lights";
 import Coral from "./elements/Coral";
 import Floor from "./elements/Floor";
 import Header from "../../../components/Header";
+import { ScrollRestoration } from "react-router-dom";
 
 const AcidificacionInt = () => {
     const cameraSettings = {
@@ -12,6 +13,7 @@ const AcidificacionInt = () => {
 
     return (
     <div className="acidificacion-background">
+      <ScrollRestoration/>
     <Header/>
     <div className="acidificacion-intro">
       <h1>Introduccion</h1>

@@ -2,6 +2,7 @@ import { Canvas } from "@react-three/fiber";
 import Green from "./Green";
 import Header from "../../components/Header";
 import './escasez.css';
+import { ScrollRestoration } from "react-router-dom";
 
 const Escasez = () => {
   const cameraSettings = {
@@ -11,6 +12,7 @@ const Escasez = () => {
 
   return (
     <div className="escasez-background">
+      <ScrollRestoration/>
       <Header />
       <div className="escasez-intro">
         <h2>Escasez de Agua</h2>

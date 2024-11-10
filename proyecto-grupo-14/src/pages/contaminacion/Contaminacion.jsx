@@ -5,6 +5,7 @@ import OilBarrel from "./OilBarrel";
 import EggCarton from "./EggCarton";
 import Header from "../../components/Header";
 import Slideshow from "../../components/Slideshow";
+import { ScrollRestoration } from "react-router-dom";
 
 const Contaminacion = () => {
   const cameraSettings = { 
@@ -13,7 +14,7 @@ const Contaminacion = () => {
 
   return (
     <div className="backgroundC">
-
+      <ScrollRestoration/>
       <div className="main-containerC">
         <Header/>
         <Canvas
@@ -41,7 +42,7 @@ const Contaminacion = () => {
       </div>
       
       <div className="third-containerC" >
-        <h1>Efectos de la contaminación</h1>
+        <h1 className="title-efectos">Efectos de la contaminación</h1>
       </div>
 
     </div>
