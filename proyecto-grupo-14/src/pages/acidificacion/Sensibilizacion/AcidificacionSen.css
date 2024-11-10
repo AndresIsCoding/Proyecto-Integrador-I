@@ -5,8 +5,8 @@
 
 .acidificacion-intro{
     position: absolute;
-    top: 90px;
-    right: 150px; 
+    top: -200px;
+    left: 40px; 
     width: 400px;
     z-index: 2;
     color: black;
