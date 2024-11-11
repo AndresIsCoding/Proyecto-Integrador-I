@@ -20,7 +20,7 @@ const Earth = (props) => {
           receiveShadow
           geometry={nodes.Cube_002.geometry}
           material={materials.Default_OBJ}
-          scale={0.36}
+          scale={1}
         />
       </group>
     </group>

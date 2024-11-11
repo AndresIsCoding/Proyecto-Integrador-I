@@ -4,6 +4,8 @@ import Header from "../../components/Header.jsx";
 import Earth from "./Earth.jsx";
 import Card from "../../components/Card.jsx";
 import {Link, useNavigate} from "react-router-dom";
+import { useState } from "react";
+import Controls from "./Controls/Controls.jsx";
 
 
 const Inicio = () => {
@@ -15,10 +17,16 @@ const Inicio = () => {
     navigate.push(path); 
   };
 
+  const [cameraPosition, setCameraPosition] = useState([0, 0, 10]);
+
+  const handleNavigation = (newPosition) => {
+    setCameraPosition(newPosition);
+  };
+
   const cameraSettings = { 
     fov: 60,
   };
-
+  
   return (
     
     <div className="main-container">
@@ -27,11 +35,12 @@ const Inicio = () => {
         className="canvas-inicio" 
         camera={cameraSettings}
         >
+        <Controls cameraPosition={cameraPosition}/> 
         <ambientLight intensity={0.5} />
         <directionalLight position={[10, 10, 5]} intensity={1} />
-        <Earth position={[0, 0, 0]}/>
+        <Earth position={[0, 0, 0]} onClick={() => handleNavigation([4, 9, 6])}/>
       </Canvas>
-
+      
       <div className="main-title">
         <h1>Solo podemos <br/>beber menos del <br/>1%</h1>
       </div>
@@ -39,8 +48,12 @@ const Inicio = () => {
       <div className="title1">
         <h2>Aunque cubra el 70% del planeta...</h2>
       </div>
+      
+      <div className="controls">
+        <button onClick={() => handleNavigation([-10, -4, 4])}>Mover a Posición 1</button>
+      </div>
 
-      <div className="small-text">
+      <div onClick={() => handleNavigation([10, 5, 5])} className="small-text">
         <h2 className="title3">¿Porque saber esto es importante?</h2>
         <p className="paragraph">
           Se estima que para 2050 aproximadamente 6000 millones<br/> de personas
