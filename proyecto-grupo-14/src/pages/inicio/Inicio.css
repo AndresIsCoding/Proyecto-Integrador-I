@@ -94,3 +94,16 @@ html,body, #root{
     justify-content: center;
     gap: 20px;
 }
+
+.country-india {
+    color: #FF5733; /* Color para India */
+  }
+  
+  .country-china {
+    color: #3498DB; /* Color para China */
+  }
+  
+  .country-usa {
+    color: #2ECC71; /* Color para USA */
+  }
+  
