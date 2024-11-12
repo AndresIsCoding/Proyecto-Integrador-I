@@ -2,9 +2,12 @@
 .backgroundC{
     display: flex;
     flex-direction: column;
-    background-color: #BAC196;
+    background-color: #6a7243;
+
 }
+
 .main-containerC {
+    position: relative;
     flex-direction: column;
     display: flex;
     height: 100vh;
@@ -60,8 +63,92 @@
     position: relative; 
     top: -4%; 
     transform: translateY(-50%); 
-    color: black; 
+    color: white; 
     z-index: 10;
     text-align: center; 
     width: 100%; 
+}
+
+.third-containerC{
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden; 
+
+}
+
+.title-efectos{
+    user-select: none;
+    z-index: 10;
+    text-align: center;
+
+}
+
+.canvas-efectos {
+    width: 700px;
+    height: 500px;
+    position: relative;
+    left: 100px;
+    top: 0; 
+  }
+
+.title-fauna{
+    user-select: none;
+    position: absolute;
+    text-align: right;
+    top: 35%;
+    right: 0;
+    margin-right: 100px;
+    z-index: 1;
+}
+
+.text-fauna{
+    user-select: none;
+    margin-right: 100px;
+    margin-top: 20px;
+    text-align: right;
+    color: white;
+    position: absolute; 
+    top: 45%; 
+    right: 0;
+}
+
+.fourth-container{
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden; 
+}
+
+.canvas-enfermedades{
+    width: 700px;
+    height: 500px;
+    position: relative;
+    left: 100px;
+    top: 0; 
+}
+
+.title-enfermedades{
+    user-select: none;
+    position: absolute;
+    text-align: right;
+    top: 25%;
+    right: 0;
+    margin-right: 100px;
+    z-index: 1;
+}
+
+.text-enfermedades{
+    user-select: none;
+    margin-right: 100px;
+    margin-top: 20px;
+    text-align: right;
+    color: white;
+    position: absolute; 
+    top: 35%; 
+    right: 0;
 }

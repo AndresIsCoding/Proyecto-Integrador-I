@@ -3,7 +3,8 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Green from "./Green";
 import Header from "../../components/Header";
-import './Escasez.css';
+import './Escasez.css'; // Usa esta si el archivo se llama "Escasez.css" con E mayúscula.
+import { ScrollRestoration } from "react-router-dom";
 
 const Escasez = () => {
   const [showCard, setShowCard] = useState(false);
@@ -33,6 +34,7 @@ const Escasez = () => {
 
   return (
     <div className="escasez-background">
+      <ScrollRestoration/>
       <Header />
       <div className="escasez-intro">
         <h2>Escasez de Agua</h2>

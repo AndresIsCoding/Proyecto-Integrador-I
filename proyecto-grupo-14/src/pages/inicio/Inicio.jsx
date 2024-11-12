@@ -1,9 +1,9 @@
+import React, { useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import './Inicio.css';
 import Earth from "./Earth.jsx";
 import Card from "../../components/Card.jsx";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
 import Controls from "./Controls/Controls.jsx";
 
 const Inicio = () => {
@@ -22,7 +22,7 @@ const Inicio = () => {
 
   const cameraSettings = {
     fov: 60,
-    position: cameraPosition
+    position: cameraPosition,
   };
 
   const handleCountryClick = (country) => {
@@ -151,5 +151,3 @@ const Inicio = () => {
 };
 
 export default Inicio;
-
-
