@@ -1,7 +1,7 @@
 import { useVideoTexture } from "@react-three/drei";
 import { useCallback, useState } from "react";
 
-const Video2 = (props) => {
+const VirusBG = (props) => {
     const texture = useVideoTexture("../videos/Viruses.mp4", {
       muted: true,
       loop: true,
@@ -27,4 +27,4 @@ const Video2 = (props) => {
     );
   };
   
-  export default Video2;
+  export default VirusBG;

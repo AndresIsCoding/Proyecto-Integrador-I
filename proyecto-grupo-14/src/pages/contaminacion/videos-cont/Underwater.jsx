@@ -1,7 +1,7 @@
 import { useVideoTexture } from "@react-three/drei";
 import { useCallback, useState } from "react";
 
-const Video = (props) => {
+const Underwater = (props) => {
     const texture = useVideoTexture("../videos/Underwater.mp4", {
       muted: true,
       loop: true,
@@ -27,4 +27,4 @@ const Video = (props) => {
     );
   };
   
-  export default Video;
+  export default Underwater;

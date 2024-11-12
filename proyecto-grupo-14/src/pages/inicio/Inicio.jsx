@@ -5,6 +5,7 @@ import Earth from "./Earth.jsx";
 import Card from "../../components/Card.jsx";
 import { Link, useNavigate } from "react-router-dom";
 import Controls from "../inicio/controls/Controls.jsx";
+import Header from "../../components/Header.jsx";
 
 const Inicio = () => {
   const navigate = useNavigate();
@@ -46,6 +47,7 @@ const Inicio = () => {
 
   return (
     <div className="main-container">
+      <Header/>
       <Canvas className="canvas-inicio" camera={cameraSettings}>
         <ambientLight intensity={0.5} />
         <directionalLight position={[10, 10, 5]} intensity={1} />
@@ -89,7 +91,7 @@ const Inicio = () => {
               className="video-contaminacion"
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/7P4rBeQ4oZo?si=ftdmEVBuiQozJN5B"
+              src="https://www.youtube.com/embed/7P4rBeQ4oZo?si=ftdmEVBuiQozJN5B&controls=1"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -109,7 +111,7 @@ const Inicio = () => {
             <iframe
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/xogbKB-93s4?si=IVrld1gY4XbnihYy&amp;controls=0"
+              src="https://www.youtube.com/embed/xogbKB-93s4?si=IVrld1gY4XbnihYy&amp;controls=1"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -129,7 +131,7 @@ const Inicio = () => {
             <iframe
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/Z-OSbwJEIbc?si=ExuUpMQnvWJ0oA3x&amp;controls=0"
+              src="https://www.youtube.com/embed/Z-OSbwJEIbc?si=ExuUpMQnvWJ0oA3x&amp;controls=1"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
