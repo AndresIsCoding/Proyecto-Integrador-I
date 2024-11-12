@@ -4,12 +4,20 @@ import Lights from "./lights/Lights";
 import Coral from "./elements/Coral";
 import Floor from "./elements/Floor";
 import Header from "../../../components/Header";
-import { ScrollRestoration } from "react-router-dom";
+import Boton from "./elements/Boton";
+import { useNavigate, ScrollRestoration } from "react-router-dom";
 
 const AcidificacionInt = () => {
     const cameraSettings = {
         
       };
+    
+    const navigate = useNavigate();   
+
+    const handleClick = (e) => {
+        e.stopPropagation()
+        navigate("/acidisensi")
+    };
 
     return (
     <div className="acidificacion-background">
@@ -17,14 +25,6 @@ const AcidificacionInt = () => {
     <Header/>
     <div className="acidificacion-intro">
       <h1>Introduccion</h1>
-        <p>
-        Como sabemos, el océano es uno de los ecosistemas más grandes
-        e importantes del planeta, pues no solo nos provee de una gran
-        variedad de recursos naturales como alimentos ,compuestos químicos 
-        para medicinas y minerales que se encuentran en el lecho marino, 
-        tambien se encarga de regular el clima, la temperatura y la generacion
-        de una gran parte del oxígeno del planeta.
-        </p>
         <p>
         El fenómeno de la acidificación es una disminución en los niveles de
         Ph del océano, este ocurre debido a que los océanos al intentar absorber
@@ -37,6 +37,8 @@ const AcidificacionInt = () => {
 
     <Canvas shadows camera={cameraSettings}>
      <Lights/>
+     <Boton position={[1,-1.5,2]} 
+          onClick={(e) => handleClick(e)}/>
      <Coral scale={0.02} position={[-2,-1.5,0]}/>
      <Floor scale={2} position={[-2,-1.5,0]} />
     </Canvas>

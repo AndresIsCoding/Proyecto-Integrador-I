@@ -3,10 +3,10 @@
     height: 100vh;
 }
 
-.acidificacion-intro{
+.acidificacionsen-intro{
     position: absolute;
-    top: 50px;
-    right: 90px; 
+    top: -200px;
+    left: 40px; 
     width: 400px;
     z-index: 2;
     color: black;
