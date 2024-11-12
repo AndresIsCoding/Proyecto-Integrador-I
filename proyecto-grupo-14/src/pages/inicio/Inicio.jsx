@@ -4,7 +4,7 @@ import './Inicio.css';
 import Earth from "./Earth.jsx";
 import Card from "../../components/Card.jsx";
 import { Link, useNavigate } from "react-router-dom";
-import Controls from "./Controls/Controls.jsx";
+import Controls from "../inicio/controls/Controls.jsx";
 
 const Inicio = () => {
   const navigate = useNavigate();
