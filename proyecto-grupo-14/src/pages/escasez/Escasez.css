@@ -12,7 +12,7 @@
   margin-left: 30px;
   max-width: 45%;
   align-items: center;
-  padding-right: 50px;
+  padding-right: 50px;  
   display: flex;
   flex-direction: column;
   justify-content: center; /* Centra el texto verticalmente */
@@ -37,4 +37,39 @@
   
   height: 100%;
   object-fit: contain; /* Mantiene la proporción del modelo */
+}
+
+.info-card {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 60%;
+  height: 60%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  font-size: 1.2rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  z-index: 10;
+  color: white;
+  display: flex;
+  flex-direction: column; /* Organiza el contenido verticalmente */
+  justify-content: space-between; /* Asegura que el botón esté en la parte inferior */
+}
+.info-content {
+  display: flex; /* Flex para colocar texto e imagen en fila */
+  gap: 20px; /* Espacio entre el texto y la imagen */
+  flex: 1; /* Ocupa el espacio disponible para empujar el botón hacia abajo */
+}
+.text-content {
+  flex: 1; /* Permite que el texto ocupe todo el espacio disponible a la izquierda */
+}
+.info-card img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+}
+.info-card button {
+  align-self: center; /* Centra el botón horizontalmente */
+  margin-top: 20px; /* Espacio adicional sobre el botón */
 }

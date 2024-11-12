@@ -7,11 +7,7 @@ const Green = (props) => {
   const groupRef = useRef();
 
   // Usa useFrame para rotar el modelo en cada fotograma
-  useFrame(() => {
-    if (groupRef.current) {
-      groupRef.current.rotation.y += 0.005; // Ajusta la velocidad de rotación
-    }
-  });
+
 
   return (
     <group ref={groupRef} {...props} dispose={null} scale={1}> {/* Ajusta el valor de scale aquí */}
