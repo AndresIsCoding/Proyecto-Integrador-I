@@ -23,8 +23,9 @@ const AcidificacionInt = () => {
     <div className="acidificacion-background">
       <ScrollRestoration/>
     <Header/>
-    <div className="acidificacion-intro">
-      <h1>Introduccion</h1>
+     <div className="acidificacion-intro">
+     <p style={{ margin: 0 }}>acidificacion</p>
+     <h1 style={{ margin: 0 }}>Introduccion</h1>
         <p>
         El fenómeno de la acidificación es una disminución en los niveles de
         Ph del océano, este ocurre debido a que los océanos al intentar absorber
@@ -33,7 +34,7 @@ const AcidificacionInt = () => {
         deforestación, esto hace que el se vuelva intolerable para varios 
         organismos, poniendo en riesgo el ecosistema marino.
         </p>
-    </div>
+     </div>
 
     <Canvas shadows camera={cameraSettings}>
      <Lights/>
