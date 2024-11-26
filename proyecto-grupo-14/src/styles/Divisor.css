@@ -1,0 +1,34 @@
+.divisor-container {
+    position: relative;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    z-index: 20;
+    
+}
+.divisor{
+    flex: 1;
+    border: none;
+    border-top: 4px solid #fff;
+    margin-top: 0;
+    margin-left: 20px;
+	box-shadow: 0 20px 20px -20px #333;
+    margin: -5.1px auto 10px; 
+}
+
+.title-wrapper{
+    width: 110px;
+    height: 20px;
+    background-color: white;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-right: 20px;
+    margin: 10px auto 10px;
+}
+
+.divisor-title{
+    border-radius: 60%;
+    color: black;
+}

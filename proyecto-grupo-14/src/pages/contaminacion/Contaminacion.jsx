@@ -9,7 +9,10 @@ import Trash from "./models-cont/Trash";
 import TrianglePopup from "../../components/TrianglePopup";
 import Underwater from "./videos-cont/Underwater";
 import VirusBG from "./videos-cont/VirusBG";
-
+import Divisor from "../../components/Divisor";
+import TrashBG from "./videos-cont/TrashBG";
+import OilBarrel from "./models-cont/OilBarrel";
+import Scene1 from "./models-cont/Scene1";
 
 
 const Contaminacion = () => {
@@ -20,7 +23,9 @@ const Contaminacion = () => {
   return (
     <div className="backgroundC">
       <ScrollRestoration/>
+
       <div className="main-containerC">
+        
         <Header/>
         <Canvas
          className="canvas-cont"
@@ -28,7 +33,8 @@ const Contaminacion = () => {
          >
         <ambientLight intensity={0.5} />
         <directionalLight position={[10, 10, 5]} intensity={5} />
-        <PlasticBottles scale={6} position={[0,-1,0]}/>
+        <TrashBG/>
+        {/*<PlasticBottles scale={8} position={[0,-1,0]}/>*/}
       </Canvas>
         
         <div className="intro-cont">
@@ -40,44 +46,69 @@ const Contaminacion = () => {
           </p>
         </div>
       </div>
+      <Divisor>Sensibilización</Divisor>
+
 
       <div className="second-containerC">
         <h1>Tipos de contaminación</h1>
         <Slideshow/>
       </div>
-      
+
+      <Divisor>Efectos</Divisor>
+
       <div className="third-containerC" >
-        <h1 className="title-efectos">Efectos de la contaminación</h1>
+        <div className="fauna-text-container">
+          <h1 className="title-fauna">En la fauna</h1>
+          <p className="text-fauna">La pesca en aguas contaminadas, así como la utilización <br/> de  aguas residuales en la ganadería y la agricultura, pueden transmitir toxinas a los alimentos que perjudiquen nuestra <br/> salud a través de su ingesta.</p>
+        </div>
         <Canvas
           className="canvas-efectos"
           camera={cameraSettings}
-          style={{ width: '700px', height: '500px', left: 100}}
+          style={{position: "absolute",width: '100%', height: '100%', left: 0, top: 0, bottom: 0,}}
         >
           <ambientLight intensity={0.5} />
           <directionalLight position={[10, 10, 5]} intensity={5} />
-          <Trash scale={4} position={[0,-2,0]}/>
+          <Trash scale={4} position={[-2.2,-2,0]}/>
           <Underwater/>
         </Canvas>
-        <h1 className="title-fauna">En la fauna</h1>
-        <p className="text-fauna">La pesca en aguas contaminadas, así como la utilización de aguas residuales en la ganadería y la agricultura, pueden transmitir toxinas a los alimentos que perjudiquen nuestra salud a través de su ingesta.</p>
-          <TrianglePopup message="Cuando el agua de ríos y lagos está sobrecargada de desechos orgánicos, escasea el oxígeno y plantas y animales pueden morir 
-          "/>
+        <TrianglePopup message="Cuando el agua de ríos y lagos está sobrecargada de desechos orgánicos, escasea el oxígeno y plantas y animales pueden morir"/> 
       </div>
 
+      <Divisor>Efectos</Divisor>
+
       <div className="fourth-container">
-        <h1 className="title-enfermedades">Enfermedades</h1>
-        <p className="text-enfermedades">La OMS calcula que unos 2.000 millones de personas beben agua potable contaminada por excrementos, exponiéndose a contraer enfermedades como el cólera, la hepatitis A y la disentería.</p>
+        <div className="enfermedades-text-container">
+          <h1 className="title-enfermedades">Enfermedades</h1>
+          <p className="text-enfermedades">La OMS calcula que unos 2.000 millones de personas beben agua potable contaminada por excrementos, exponiéndose a contraer enfermedades como el cólera, la hepatitis A y la disentería.</p>
+        </div>
+        
         <Canvas
           className="canvas-enfermedades"
           camera={cameraSettings}
-          style={{ width: '700px', height: '500px', left: 100}}
+          style={{ position: "absolute",width: '100%', height: '100%', left: 0, top: 0, bottom: 0,}}
         >
           <ambientLight intensity={0.5} />
           <directionalLight position={[10, 10, 5]} intensity={5} />
           <VirusBG/>
-          <Virus scale={1} position={[0,0,0]}/>
+          <Virus scale={1} position={[-1.5,0,0]}/>
         </Canvas>
       </div>
+      
+      <Divisor>Soluciones</Divisor>
+
+      <div className="fifth-container">
+        {/*<Canvas
+          className="canvas-soluciones"
+          camera={cameraSettings}
+          style={{position: "absolute",width: '800px', height: '800px', left: 0, top: 0, bottom: 0,}}
+        >
+          <ambientLight intensity={0.5} />
+          <directionalLight position={[10, 10, 5]} intensity={5} />
+          <Scene1 scale={80} position={[0,-4,0]}/>
+        </Canvas>*/}
+        
+      </div>
+        
     
     </div>
 
