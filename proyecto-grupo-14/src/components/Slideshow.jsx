@@ -44,7 +44,7 @@ const Slideshow = () => {
         <iframe
           className="video-slide"
           width="100%"
-          height="700"
+          height="600"
           src={slidesData[currentSlide].videoSrc} 
           title="Video Slide"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
