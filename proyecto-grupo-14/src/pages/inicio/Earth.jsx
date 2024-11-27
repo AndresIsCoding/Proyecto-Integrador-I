@@ -13,7 +13,7 @@ const Earth = ({ onCountryClick, ...props }) => {
   return (
     <group {...props} dispose={null}>
       <OrbitControls
-        autoRotate={true}
+        autoRotate={false}
         enableZoom={false}
         enablePan={false}
       />
@@ -27,7 +27,7 @@ const Earth = ({ onCountryClick, ...props }) => {
           receiveShadow
           geometry={nodes.Cube_002.geometry}
           material={materials.Default_OBJ}
-          scale={0.36}
+          scale={0.8}
         />
       </group>
 
@@ -36,9 +36,9 @@ const Earth = ({ onCountryClick, ...props }) => {
         {/* Pin para India */}
         <mesh
           onPointerDown={() => handleCountryClick('India')}
-          position={[1, 1.5, 0.5]} // Posición en Y igual a la de USA
-          scale={[1, 0.5, 1]} // Escala igual a la de USA
-          rotation={[Math.PI, 0, 0]} // Rota el cono 180 grados en el eje X
+          position={[1.64, 3.56, 1.1]}
+          scale={[1, 0.5, 1]}
+          rotation={[Math.PI, 0, 0]}
         >
           <coneGeometry args={[0.1, 0.3, 32]} />
           <meshStandardMaterial color="red" />
@@ -47,9 +47,9 @@ const Earth = ({ onCountryClick, ...props }) => {
         {/* Pin para China */}
         <mesh
           onPointerDown={() => handleCountryClick('China')}
-          position={[0.3, 1.75, 0.6]} // Posición en Y igual a la de USA
-          scale={[1, 0.5, 1]} // Escala igual a la de USA
-          rotation={[Math.PI, 0, 0]} // Rota el cono 180 grados en el eje X
+          position={[3.4, 2, 1]}
+          scale={[1, 0.5, 1]}
+          rotation={[Math.PI, 0, 45]}
         >
           <coneGeometry args={[0.1, 0.3, 32]} />
           <meshStandardMaterial color="blue" />
@@ -58,9 +58,9 @@ const Earth = ({ onCountryClick, ...props }) => {
         {/* Pin para USA */}
         <mesh
           onPointerDown={() => handleCountryClick('USA')}
-          position={[-0.5, 1.75, -0.3]} // Posición y escala como referencia
+          position={[-3, 2.7, -0.3]}
           scale={[1, 0.5, 1]}
-          rotation={[Math.PI, 0, 0]} // Rota el cono 180 grados en el eje X
+          rotation={[Math.PI, 0, 50]}
         >
           <coneGeometry args={[0.1, 0.3, 32]} />
           <meshStandardMaterial color="green" />

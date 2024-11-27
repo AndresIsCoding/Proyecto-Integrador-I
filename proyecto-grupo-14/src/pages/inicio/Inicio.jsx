@@ -1,9 +1,10 @@
+import React, { useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import './Inicio.css';
-import Header from "../../components/Header.jsx";
 import Earth from "./Earth.jsx";
 import Card from "../../components/Card.jsx";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Controls from "../inicio/controls/Controls.jsx";
 
 const Inicio = () => {
   const navigate = useNavigate();
@@ -13,9 +14,17 @@ const Inicio = () => {
     navigate(path);
   };
 
+  const [cameraPosition, setCameraPosition] = useState([0, 0, 10]);
+
+  const handleNavigation = (newPosition) => {
+    setCameraPosition(newPosition);
+  };
+
   const cameraSettings = {
     fov: 60,
+    position: cameraPosition,
   };
+
 
   const handleCountryClick = (country) => {
     switch (country) {
@@ -35,15 +44,20 @@ const Inicio = () => {
 
   return (
     <div className="main-container">
-      <Header />
-      <Canvas
-        className="canvas-inicio"
-        camera={cameraSettings}
-      >
+      <Canvas className="canvas-inicio" camera={cameraSettings}>
         <ambientLight intensity={0.5} />
         <directionalLight position={[10, 10, 5]} intensity={1} />
         <Earth position={[0, 0, 0]} onCountryClick={handleCountryClick} />
       </Canvas>
+
+      {/* Tarjeta de instrucciones */}
+      <div className="instruction-card">
+        <h3>Interacción con el mapa</h3>
+        <p>
+          Puedes mover el mapa para explorar diferentes regiones. Haz clic en
+          los marcadores para conocer más sobre cada sección específica.
+        </p>
+      </div>
 
       <div className="main-title">
         <h1>Solo podemos <br />beber menos del <br />1%</h1>
@@ -53,14 +67,15 @@ const Inicio = () => {
         <h2>Aunque cubra el 70% del planeta...</h2>
       </div>
 
-      <div className="small-text">
+      <div onClick={() => handleNavigation([10, 5, 5])} className="small-text">
         <h2 className="title3">¿Porque saber esto es importante?</h2>
         <p className="paragraph">
           Se estima que para 2050 aproximadamente 6000 millones<br /> de personas
-          sufrirán de escasez de agua debido<br />al aumento de los niveles de contaminación.<br />
+          sufrirán de escasez de agua debido<br />al aumento de los niveles de contaminación.
+          <br />
           <span className="country-india">India</span>: Escasez de agua debido a sequías y alta demanda <br />
-          <span className="country-china">China</span>: Problemas de contaminación en cuerpos de agua. <br />
-          <span className="country-usa">USA</span>: Acidificación de océanos por emisiones de carbono. <br />
+          <span className="country-china">China</span>: Problemas de contaminación en cuerpos de agua <br />
+          <span className="country-usa">USA</span>: Acidificación de océanos por emisiones de carbono
         </p>
 
       </div>
@@ -68,7 +83,6 @@ const Inicio = () => {
       <div className="second-container">
         <h2 className="title2">Pero ese no es el único problema</h2>
         <div className="intro-contamincacion">
-          {/* Contaminación */}
           <Card>
             <iframe
               className="video-contaminacion"
@@ -86,13 +100,10 @@ const Inicio = () => {
               <p>
                 Cada día, 2 millones de toneladas de aguas residuales desembocan en las aguas del mundo, según datos de la ONU.
               </p>
-              <button onClick={() => handleLinkClick("/contaminacion")}>
-                ¿Quieres saber más? Click aquí
-              </button>
+              <Link to="/contaminacion" onClick={() => handleLinkClick("/contaminacion")}>¿Quieres saber más? Click aquí</Link>
             </div>
           </Card>
 
-          {/* Escasez */}
           <Card>
             <iframe
               width="560"
@@ -109,13 +120,10 @@ const Inicio = () => {
               <p>
                 Los recursos de agua dulce por persona se han reducido un 20 por ciento en los últimos 20 años. A su vez, la disponibilidad y calidad empeoran rápidamente.
               </p>
-              <button onClick={() => handleLinkClick("/escasez")}>
-                ¿Quieres saber más? Click aquí
-              </button>
+              <Link to="/escasez" onClick={() => handleLinkClick("/escasez")}>¿Quieres saber más? Click aquí</Link>
             </div>
           </Card>
 
-          {/* Acidificación */}
           <Card>
             <iframe
               width="560"
@@ -132,9 +140,7 @@ const Inicio = () => {
               <p>
                 Es una consecuencia directa de la quema de combustibles fósiles y la contaminación por carbono.
               </p>
-              <button onClick={() => handleLinkClick("/acidificacion")}>
-                ¿Quieres saber más? Click aquí
-              </button>
+              <Link to="/acidificacion" onClick={() => handleLinkClick("/acidificacion")}>¿Quieres saber más? Click aquí</Link>
             </div>
           </Card>
         </div>

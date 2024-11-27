@@ -12,7 +12,7 @@
   margin-left: 30px;
   max-width: 45%;
   align-items: center;
-  padding-right: 50px;
+  padding-right: 50px;  
   display: flex;
   flex-direction: column;
   justify-content: center; /* Centra el texto verticalmente */
@@ -56,28 +56,20 @@
   flex-direction: column; /* Organiza el contenido verticalmente */
   justify-content: space-between; /* Asegura que el botón esté en la parte inferior */
 }
-
 .info-content {
   display: flex; /* Flex para colocar texto e imagen en fila */
   gap: 20px; /* Espacio entre el texto y la imagen */
   flex: 1; /* Ocupa el espacio disponible para empujar el botón hacia abajo */
 }
-
 .text-content {
   flex: 1; /* Permite que el texto ocupe todo el espacio disponible a la izquierda */
 }
-
 .info-card img {
   max-width: 50%;
   height: auto;
   border-radius: 8px;
 }
-
 .info-card button {
   align-self: center; /* Centra el botón horizontalmente */
   margin-top: 20px; /* Espacio adicional sobre el botón */
 }
-
-
-
-
