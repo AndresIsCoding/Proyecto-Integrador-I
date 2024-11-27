@@ -26,18 +26,16 @@ const Inicio = () => {
     position: cameraPosition,
   };
 
+
   const handleCountryClick = (country) => {
     switch (country) {
       case "India":
-        handleNavigation([-10, -4, 4]);
         handleLinkClick("/escasez");
         break;
       case "China":
-        handleNavigation([4, 9, 6]);
         handleLinkClick("/contaminacion");
         break;
       case "USA":
-        handleNavigation([10, 5, 5]);
         handleLinkClick("/acidificacion");
         break;
       default:
@@ -81,6 +79,7 @@ const Inicio = () => {
           <span className="country-china">China</span>: Problemas de contaminación en cuerpos de agua <br />
           <span className="country-usa">USA</span>: Acidificación de océanos por emisiones de carbono
         </p>
+
       </div>
 
       <div className="second-container">
