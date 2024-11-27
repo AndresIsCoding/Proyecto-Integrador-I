@@ -1,21 +1,24 @@
-import { Canvas } from "@react-three/fiber";
 import PlasticB from "./PlasticB";
 import { Physics } from "@react-three/rapier";
+import { useState, useEffect } from "react";
+import PlasticBottles from "./PlasticBottles";
 
 const Scene1 = () => {
-  const cameraSettings = {
-    position: [0, 2, 5],
-  };
+  const [reset, setReset] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setReset(prev => !prev);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <Canvas shadows camera={cameraSettings}>
-      <Physics
-        debug
-        gravity={[0, -1, 0]}
-      >
-        <PlasticB/>
-      </Physics>
-    </Canvas>
+    <Physics gravity={[0, -9.8, 0]} debug>
+      <PlasticB reset={reset} />
+      <PlasticBottles/>
+    </Physics>
   );
 };
 

@@ -50,7 +50,6 @@ const Contaminacion = () => {
 
 
       <div className="second-containerC">
-        <h1>Tipos de contaminación</h1>
         <Slideshow/>
       </div>
 
@@ -97,15 +96,19 @@ const Contaminacion = () => {
       <Divisor>Soluciones</Divisor>
 
       <div className="fifth-container">
-        {/*<Canvas
+        <Canvas
           className="canvas-soluciones"
           camera={cameraSettings}
-          style={{position: "absolute",width: '800px', height: '800px', left: 0, top: 0, bottom: 0,}}
+          style={{position: "absolute",width: '100%', height: '100%', left: 0, top: 0, bottom: 0,}}
         >
           <ambientLight intensity={0.5} />
           <directionalLight position={[10, 10, 5]} intensity={5} />
-          <Scene1 scale={80} position={[0,-4,0]}/>
-        </Canvas>*/}
+          <Scene1/>
+        </Canvas>
+        <div className="plasticos-container">
+          <h1 className="plasticos-title">Menos consumo de plasticos</h1>
+          <p className="plasticos-text">Para reducir la contaminación hídrica es imprescindible disminuir la utilización del plástico de un solo uso y reciclar siempre este material en el contenedor adecuado. El plástico tarda en degradarse y permanece en el medio ambiente durante muchos años, descomponiéndose en forma de microplásticos que dañan el agua y toda la vida que ésta contiene.</p>
+        </div>
         
       </div>
         
