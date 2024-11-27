@@ -44,13 +44,14 @@ const Slideshow = () => {
         <iframe
           className="video-slide"
           width="100%"
-          height="300"
+          height="700"
           src={slidesData[currentSlide].videoSrc} 
           title="Video Slide"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
         ></iframe>
         <div className='inside-card'>
+        <h1 className="slideshow-main-title">Tipos de contaminación</h1>
         <h2 className="slide-title">{slidesData[currentSlide].title}</h2>
         <p className="slide-description">{slidesData[currentSlide].description}</p>
           <div className="slideshow-controls">

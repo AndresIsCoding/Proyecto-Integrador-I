@@ -61,7 +61,7 @@ const PlasticB = ({ scale }) => {
         </mesh>
       </RigidBody>
 
-      <RigidBody type="fixed" position={[0, 0, 0]} restitution={0.5} friction={0.9}>
+           <RigidBody type="fixed" position={[0, 0, 0]} restitution={0.5} friction={0.9}>
         <mesh receiveShadow>
           <boxGeometry args={[1, 10, 0.1]} />
           <meshStandardMaterial
