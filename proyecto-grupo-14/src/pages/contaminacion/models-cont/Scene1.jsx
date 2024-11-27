@@ -15,7 +15,7 @@ const Scene1 = () => {
   }, []);
 
   return (
-    <Physics gravity={[0, -9.8, 0]} debug>
+    <Physics gravity={[0, -9.8, 0]}>
       <PlasticB reset={reset} />
       <PlasticBottles/>
     </Physics>
