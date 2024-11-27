@@ -1,4 +1,4 @@
-# Actual version: 3.0.2
+# Actual version: 3.0.3
 # How to run the project?
 1. Enter to the terminal
 2. Write cd proyecto-grupo-14
