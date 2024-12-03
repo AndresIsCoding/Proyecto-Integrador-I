@@ -11,6 +11,7 @@ import AcidiSoluc from './pages/acidificacion/Solucion/AcidificacionSolu.jsx';
 import './index.css'
 import {createBrowserRouter, RouterProvider } from "react-router-dom";
 import Escasez from './pages/escasez/Escasez.jsx';
+import PContaminacion from './pages/quiz/quiz-contaminacion/PContaminacion.jsx';
 
 
 /**
@@ -62,6 +63,11 @@ const router = createBrowserRouter([
   {
     path: "quiz",
     element: <Quiz/>
+  },
+
+  {
+    path: "question-one",
+    element: <PContaminacion/>
   },
 
 ])

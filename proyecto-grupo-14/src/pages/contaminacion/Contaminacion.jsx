@@ -3,7 +3,6 @@ import './Contaminacion.css';
 import Header from "../../components/Header";
 import Slideshow from "../../components/Slideshow";
 import { ScrollRestoration } from "react-router-dom";
-import PlasticBottles from "./models-cont/PlasticBottles";
 import Virus from "./models-cont/Virus";
 import Trash from "./models-cont/Trash";
 import TrianglePopup from "../../components/TrianglePopup";
@@ -11,7 +10,6 @@ import Underwater from "./videos-cont/Underwater";
 import VirusBG from "./videos-cont/VirusBG";
 import Divisor from "../../components/Divisor";
 import TrashBG from "./videos-cont/TrashBG";
-import OilBarrel from "./models-cont/OilBarrel";
 import Scene1 from "./models-cont/Scene1";
 
 

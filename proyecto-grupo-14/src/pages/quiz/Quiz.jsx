@@ -1,23 +1,21 @@
 import { Link } from "react-router-dom";
-
-const Quiz = () => {
-    const cameraSettings = { 
-      fov: 60,
-    };
-  
+import PContaminacion from "./quiz-contaminacion/PContaminacion";
+import Header from "../../components/Header";
+import './Quiz.css'
+const Quiz = () => { 
     return (
-      <div style={{
-        textAlign: "center",
-        top: '50%'
-        }}>
-        <h1>
-            Proximamente...
-        </h1>
+      <>
+        <Header/>
+        <div className="backgroundQ">
+          
+          {/*<PContaminacion/> Pregunta de contaminación*/}     
+          <div className="intro-quiz">
+            <h1>Es momento de que pongas tus conocimientos en practica</h1>
+            <Link to="/question-one"><button>Continuar</button></Link>
+          </div>
+        </div>
+      </>
 
-        <Link to="/inicio">Volver al inicio</Link>
-        
-      </div>
-      
     );
   };
 
