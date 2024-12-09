@@ -11,3 +11,30 @@
     z-index: 2;
     color: black;
 }
+
+.coral-intro{
+    position: absolute;
+    top: 480px;
+    right: 460px; 
+    width: 400px;
+    z-index: 2;
+    color: red;
+}
+
+.video-card {
+    position: absolute;
+    top: 15%;
+    left: 16%;
+    width: 60%;
+    height: 60%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    font-size: 1.2rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    z-index: 10;
+    color: white;
+    display: flex;
+    flex-direction: column; /* Organiza el contenido verticalmente */
+    justify-content: space-between; /* Asegura que el botón esté en la parte inferior */
+  }

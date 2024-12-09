@@ -6,8 +6,14 @@ import Floor from "./elements/Floor";
 import Header from "../../../components/Header";
 import Boton from "./elements/Boton";
 import { useNavigate, ScrollRestoration } from "react-router-dom";
+import VideoAgua from "./elements/VideoAgua";
+import { useState } from "react";
+import PosProcesado from "./elements/PosProcesado";
 
 const AcidificacionInt = () => {
+
+    const [showVideo, setShowVideo] = useState(false);
+
     const cameraSettings = {
         
       };
@@ -36,14 +42,29 @@ const AcidificacionInt = () => {
         </p>
      </div>
 
-    <Canvas shadows camera={cameraSettings}>
-     <Lights/>
-     <Boton position={[1,-1.5,2]} 
+     <div className="coral-intro">
+     <p style={{ margin: 0 }}>(!)Click para ver un arrecife de coral</p>
+     </div>
+
+     <Canvas shadows camera={cameraSettings}>
+      <PosProcesado/>
+      <Lights/>
+      <Boton position={[1,-1.5,2]} 
           onClick={(e) => handleClick(e)}/>
-     <Coral scale={0.02} position={[-2,-1.5,0]}/>
-     <Floor scale={2} position={[-2,-1.5,0]} />
-    </Canvas>
+      <Coral scale={0.02} position={[-2,-1.5,0]} onClick={() => setShowVideo(true)}/>
+      <Floor scale={2} position={[-2,-1.5,0]} />
+     </Canvas>
+     
+     {showVideo && (
+      <div className="video-card">
+       <Canvas>
+        <VideoAgua scale={10}/>
+       </Canvas>
+       <button onClick={() => setShowVideo(false)}>Cerrar</button>
+      </div>)}
+
     </div>
+
     );
 };
 
