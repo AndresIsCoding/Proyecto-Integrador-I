@@ -1,18 +1,30 @@
 .backgroundQ {
   display: flex;
   align-items: center;
-  min-height: 100vh;
+  height: 100%;
+  width: 100%;
   background: #E0EAFC;  
   background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  
   background: linear-gradient(to right, #CFDEF3, #E0EAFC);
+  position: relative;
 }
 
 .intro-quiz {
+  background: #E0EAFC;  
+  background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  
+  background: linear-gradient(to right, #CFDEF3, #E0EAFC);
+  position: relative;
   user-select: none;
   position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   right: 0%;
-  height: 310px;
-  width: 500px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 10;
   text-align: center;
   padding: 20px;
   color: black;
@@ -20,10 +32,19 @@
 
 .intro-quiz h1 {
   margin-bottom: 20px;
+  position: relative;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
 .intro-quiz button {
-  margin-top: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 20px;
   background-color:#61B2F2;
   color: black;
   border: none;

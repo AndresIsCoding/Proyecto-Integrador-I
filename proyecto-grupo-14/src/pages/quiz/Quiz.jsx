@@ -7,25 +7,31 @@ import OilBarrel from "../contaminacion/models-cont/OilBarrel";
 import Lights from "../acidificacion/Sensibilizacion/lights/Lights";
 import Header from "../../components/Header";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, Text} from "@react-three/drei";
 import Barril from "./Elements/Barril";
 import Botella from "./Elements/Botella";
 import Factorio from "../acidificacion/Solucion/elements/Factorio";
 import Fabrica from "./Elements/Fabrica";
 import Car from "./Elements/Car";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import './Quiz.css'
 
 const Quiz = () => {
   const cameraSettings = {
-    position: [10, 10, 10],
+    position: [0, 10, 30],
     fov: 35,
   };
 
   const [visibleModels, setVisibleModels] = useState(new Set([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]));
+  const [Puntos, setPuntos] = useState(0);
+  const [gameStatus, setGameStatus] = useState('start'); 
 
-  const [Puntos, setPuntos] = useState(10);
+  const maxPoints = 10;
+  const minPoints = -5; 
 
   const handleClick = (id) => {
+    if (gameStatus !== 'inProgress') return;
+
     setVisibleModels ((prev) => {
       const updated = new Set(prev);
       updated.delete(id);
@@ -46,7 +52,29 @@ const Quiz = () => {
       };
   };
 
-  console.log("Puntos:", Puntos);
+  useEffect(() => {
+    if (Puntos >= maxPoints) {
+      setGameStatus('finished');
+    } else if (Puntos <= minPoints) {
+      setGameStatus('finished');
+    }
+  }, [Puntos]);
+
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      setGameStatus('finished');
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
+
+  const startGame = () => {
+    setGameStatus('inProgress')
+  }
   
   return (
   <div className="acidificacion-background">
@@ -68,8 +96,43 @@ const Quiz = () => {
    {visibleModels.has(12) && <Car onClick={() => handleClick(12)} scale={0.6} position={[6,1.45,-2]}/>}
    {visibleModels.has(13) && <Car onClick={() => handleClick(13)}scale={0.6} position={[-4,1.8,2]}/>}
    <Tierra scale={12} position={[0,0,-8]} />
+   <Text 
+          position={[0, 5, -5]} 
+          fontSize={1}
+          color="black"
+          anchorX="center"
+          anchorY="middle"
+        >
+          Puntos: {Puntos}
+    </Text>
+    <Text 
+          position={[0, -7, -5]} 
+          fontSize={1}
+          color="black"
+          anchorX="center"
+          anchorY="middle"
+        >
+          Elimina los objetos que sean potencialmente dañinos para los cuerpos de agua
+    </Text>
+    {gameStatus === 'finished' && (
+          <Text
+            position={[0, 3, -5]} 
+            fontSize={2}
+            color="black"
+            anchorX="center"
+            anchorY="middle"
+          >
+            ¡Juego Terminado!
+          </Text>)}
   </Canvas>
+  {gameStatus === 'start' && (
+        <div className="intro-quiz">
+          <h1>¿Estas preparado para <br/> poner tus conocimientos en práctica?</h1>
+          <button onClick={startGame}>Iniciar Juego</button>
+        </div>
+  )}
   </div>
+  
   );
 };
 
