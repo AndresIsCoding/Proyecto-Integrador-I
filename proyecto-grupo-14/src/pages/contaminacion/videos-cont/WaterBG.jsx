@@ -2,7 +2,7 @@ import { useVideoTexture } from "@react-three/drei";
 import { useCallback, useState } from "react";
 
 const WaterBG = (props) => {
-    const texture = useVideoTexture("../videos/Agua_contaminada.mp4", {
+    const texture = useVideoTexture("../videos/WaterBG.mp4", {
       muted: true,
       loop: true,
       start: true,

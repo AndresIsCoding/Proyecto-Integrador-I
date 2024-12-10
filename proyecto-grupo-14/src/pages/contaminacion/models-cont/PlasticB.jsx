@@ -55,7 +55,7 @@ const PlasticB = ({ scale }) => {
           <boxGeometry args={[50, 0.1, 50]} />
           <meshStandardMaterial
             color="lightgray"
-            opacity={0.3}
+            opacity={0}
             transparent={true}
           />
         </mesh>
