@@ -11,7 +11,7 @@ import VirusBG from "./videos-cont/VirusBG";
 import Divisor from "../../components/Divisor";
 import TrashBG from "./videos-cont/TrashBG";
 import Scene1 from "./models-cont/Scene1";
-
+import PostProcessing from "./Postprocessing";
 
 const Contaminacion = () => {
   const cameraSettings = { 
@@ -84,6 +84,7 @@ const Contaminacion = () => {
           camera={cameraSettings}
           style={{ position: "absolute",width: '100%', height: '100%', left: 0, top: 0, bottom: 0,}}
         >
+          <PostProcessing />
           <ambientLight intensity={0.5} />
           <directionalLight position={[10, 10, 5]} intensity={5} />
           <VirusBG/>
