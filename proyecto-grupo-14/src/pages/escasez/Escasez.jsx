@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Text } from "@react-three/drei";
+import { OrbitControls, Text, useVideoTexture } from "@react-three/drei";
+import { EffectComposer, Pixelation } from "@react-three/postprocessing"; // Importar pixelation
 import Green from "./Green";
 import Skull from "./skull";
 import Header from "../../components/Header";
@@ -9,10 +10,22 @@ import { ScrollRestoration } from "react-router-dom";
 import { Physics } from "@react-three/rapier";
 import { RigidBody } from "@react-three/rapier";
 
+const VideoPlane = ({ url, position, rotation }) => {
+  const texture = useVideoTexture('/videos/sequia.mp4'); // Cargar textura del video
+  return (
+    <mesh position={position} rotation={rotation}>
+      <planeGeometry args={[5, 3]} /> {/* Ajustar tamaño del video */}
+      <meshBasicMaterial map={texture} toneMapped={false} />
+    </mesh>
+  );
+};
+
+
 const Escasez = () => {
   const [showCard, setShowCard] = useState(false);
   const [showSolutions, setShowSolutions] = useState(false);
   const [autoRotate, setAutoRotate] = useState(false);
+  const [pixelate, setPixelate] = useState(false);
 
   const handleModelClick = () => {
     setShowCard(true);
@@ -68,9 +81,24 @@ const Escasez = () => {
         >
           Cada Gota Cuenta
         </Text>
+        <VideoPlane url="/videos/escasez.mp4" position={[0, 1.5, -5]} rotation={[0, 0, 0]} />
         <Green onClick={handleModelClick} />
         <OrbitControls autoRotate={autoRotate} autoRotateSpeed={1} enableZoom={false} />
+        {/* Posprocesado con Pixelation */}
+        {pixelate && (
+          <EffectComposer>
+            <Pixelation granularity={3} />
+          </EffectComposer>
+        )}
       </Canvas>
+
+      <button
+        onClick={() => setPixelate((prev) => !prev)}
+        className="button-pixelate"
+      >
+        {pixelate ? "Desactivar Pixelation" : "Activar Pixelation"}
+      </button>
+
 
       <div className="instruction-card">
         <p>💡 Puedes hacer clic en el modelo para más información.</p>
