@@ -15,6 +15,7 @@ import Fabrica from "./Elements/Fabrica";
 import Car from "./Elements/Car";
 import { useState, useEffect } from "react";
 import './Quiz.css'
+import { Html} from "@react-three/drei";
 
 const Quiz = () => {
   const cameraSettings = {
@@ -25,9 +26,10 @@ const Quiz = () => {
   const [visibleModels, setVisibleModels] = useState(new Set([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]));
   const [Puntos, setPuntos] = useState(0);
   const [gameStatus, setGameStatus] = useState('start'); 
+  const harmfulObjects = new Set([1, 2, 3, 4, 5, 6]);
 
-  const maxPoints = 10;
-  const minPoints = -5; 
+  const maxPoints = 7;
+  const minPoints = -6; 
 
   const handleClick = (id) => {
     if (gameStatus !== 'inProgress') return;
@@ -53,12 +55,29 @@ const Quiz = () => {
   };
 
   useEffect(() => {
+    const remainingObjects = [...visibleModels];
+    const harmfulRemaining = remainingObjects.every(id => harmfulObjects.has(id));
+
+    if (harmfulRemaining) {
+      setGameStatus('finished');
+    } else if (Puntos >= maxPoints || Puntos <= minPoints) {
+      setGameStatus('finished');
+    }
+  }, [visibleModels, Puntos]);
+
+  useEffect(() => {
     if (Puntos >= maxPoints) {
       setGameStatus('finished');
     } else if (Puntos <= minPoints) {
       setGameStatus('finished');
     }
   }, [Puntos]);
+
+  useEffect(() => {
+    if (visibleModels.size === 0) { 
+      setGameStatus('finished'); 
+    }
+  }, [visibleModels]);
 
   useEffect(() => {
     const handleBeforeUnload = () => {
@@ -115,15 +134,25 @@ const Quiz = () => {
           Elimina los objetos que sean potencialmente dañinos para los cuerpos de agua
     </Text>
     {gameStatus === 'finished' && (
-          <Text
-            position={[0, 3, -5]} 
-            fontSize={2}
-            color="black"
-            anchorX="center"
-            anchorY="middle"
-          >
-            ¡Juego Terminado!
-          </Text>)}
+          <>
+            <Text
+              position={[0, 3, -5]} 
+              fontSize={2}
+              color="black"
+              anchorX="center"
+              anchorY="middle"
+            >
+              ¡Juego Terminado!
+            </Text>
+            <Html>
+            <div className="calificaciones-button">
+            <Link to="/calificaciones">
+              <button>Ver Calificaciones</button>
+            </Link>
+          </div>
+          </Html>
+        </>
+        )}
   </Canvas>
   {gameStatus === 'start' && (
         <div className="intro-quiz">
